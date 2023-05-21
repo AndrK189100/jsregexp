@@ -1,5 +1,5 @@
 {
-  "name": "orf",
+  "name": "regexp",
   "type": "module",
   "version": "1.0.0",
   "description": "",
@@ -41,10 +41,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndrK189100/objreflexproxy.git"
+    "url": "git+https://github.com/AndrK189100/jsregexp.git"
   },
   "bugs": {
-    "url": "https://github.com/AndrK189100/objreflexproxy/issues"
+    "url": "https://github.com/AndrK189100/jsregexp/issues"
   },
-  "homepage": "https://github.com/AndrK189100/objreflexproxy#readme"
+  "homepage": "https://github.com/AndrK189100/jsregexp#readme"
 }
