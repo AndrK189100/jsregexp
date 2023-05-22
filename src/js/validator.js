@@ -20,7 +20,6 @@ export default class Validator {
       cleanPhone += p[i];
     }
     return cleanPhone;
-    // return `+${p[1] === '8' ? '7' : p[1]}${p[2]}${p[3]}${p[4]}${p[5]}`;
   }
 }
 
