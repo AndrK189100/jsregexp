@@ -9,19 +9,19 @@ export default class Validator {
   }
 
   static validatePhone(phone) {
-    const p = Array.from(phone.matchAll(/\D*(\d{1,2})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d{1})\D*(\d*)?/g))[0];
-
-    if (p[p.length - 1] === undefined) { p.pop(); }
-    if (p.length === 13) {
-      p[1] += p[2];
-      p.splice(2, 1);
+    const p = phone.replace(/[^\d*]/g, '').split('');
+    if (p.length >= 12) {
+      p[0] += p[1];
+      p.splice(1, 1);
     }
 
-    let cleanPhone = `+${p[1] === '8' ? '7' : p[1]}`;
-    for (let i = 2; i < p.length; i += 1) {
+    let cleanPhone = `+${p[0] === '8' ? '7' : p[0]}`;
+    for (let i = 1; i < p.length; i += 1) {
       cleanPhone += p[i];
     }
     return cleanPhone;
     // return `+${p[1] === '8' ? '7' : p[1]}${p[2]}${p[3]}${p[4]}${p[5]}`;
   }
 }
+
+Validator.validatePhone('8 6(927) 000-00-01');
