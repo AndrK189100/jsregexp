@@ -1,10 +1,4 @@
-import './js/app.js';
+import Validator from './js/validator.js';
 
-import { orderByProps, getSpecialAttack } from './js/sfunctions.js';
-import Daemon from './js/daemon.js';
-
-const daemon = new Daemon('Azrail');
-
-console.log(orderByProps(daemon, ['name', 'type']));
-console.log('===================================================');
-console.log(getSpecialAttack(daemon));
+console.log(Validator.validateUsername('sdf33dsfdf'));
+console.log(Validator.validatePhone('8 (921) 555 5555'));
